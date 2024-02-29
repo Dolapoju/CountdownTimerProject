@@ -1,6 +1,8 @@
-var dueDate = new Date("Mar 30, 2024 11:00:00");
-document.getElementById("due-date").innerHTML = dueDate.toDateString();
-var countDownDate = dueDate.getTime();
+var today = new Date();
+var countdownDateInput = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 10, 11, 0, 0);
+document.getElementById("due-date").innerHTML = countdownDateInput.toDateString();
+var countDownDate = countdownDateInput.getTime();
+
 var x = setInterval(function () {
   var now = new Date().getTime();
   var timeDifference = countDownDate - now;
@@ -21,3 +23,4 @@ var x = setInterval(function () {
     document.getElementById("secs").innerHTML = "";
   }
 }, 1000);
+
