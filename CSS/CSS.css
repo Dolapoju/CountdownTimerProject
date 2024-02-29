@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #002349;
+  }
+  
+  .parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .parent > * {
+    width: 40%;
+    margin-top: 5rem;
+  }
+  @media screen and (max-width: 900px) {
+    .parent {
+      display: flex;
+      flex-direction: column;
+    }
+    .parent > * {
+      width: 90%;
+    }
+    .right {
+      margin-top: 0;
+    }
+  }
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #cac0b3;
+  }
+  .timergroup {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .subheading {
+    letter-spacing: 4px;
+  }
+  .salespitch {
+    margin: 1rem 0;
+  }
+  .timer {
+    background-color: #957c3d;
+    border-radius: 5px;
+    color: #fff;
+    width: 4.5rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #expired {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: tomato;
+  }
+  #days, #hours, #mins, #secs {
+    font-size: 1.5rem;
+  }
+  
